@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usman Ali - Digital Marketing & SMM | Meta Ads Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ivory: #f5f1ed;
+            --charcoal: #1a1a1a;
+            --copper: #9b7c6e;
+            --copper-light: #b89985;
+            --gray-light: #e8e3dd;
+            --gray-dark: #4a4a4a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            color: var(--charcoal);
+            background-color: var(--ivory);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        header {
+            background: var(--ivory);
+            padding: 20px 0;
+            border-bottom: 1px solid var(--gray-light);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--charcoal);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--copper);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--charcoal);
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--copper);
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .hero-tag {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--copper);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--charcoal);
+        }
+
+        .hero-tagline {
+            font-size: 18px;
+            color: var(--gray-dark);
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-right: 15px;
+        }
+
+        .cta-primary:hover {
+            background: var(--copper);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid var(--charcoal);
+            color: var(--charcoal);
+            padding: 14px 40px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+
+        .cta-secondary:hover {
+            background: var(--charcoal);
+            color: var(--ivory);
+        }
+
+        /* About Section */
+        .about {
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 80px 20px;
+            margin: 80px 0;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+
+        .about p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .expertise-list {
+            margin-top: 30px;
+        }
+
+        .expertise-list li {
+            list-style: none;
+            padding: 10px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .expertise-list li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--copper);
+            font-weight: bold;
+        }
+
+        /* Services Section */
+        .services {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .section-title {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: var(--charcoal);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: white;
+            border: 1px solid var(--gray-light);
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            border-color: var(--copper);
+            box-shadow: 0 4px 20px rgba(155, 124, 110, 0.1);
+        }
+
+        .service-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--copper);
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+
+        .service-card p {
+            font-size: 14px;
+            color: var(--gray-dark);
+            line-height: 1.6;
+        }
+
+        /* Results/Metrics Section */
+        .metrics {
+            background: var(--gray-light);
+            padding: 80px 20px;
+            margin: 80px 0;
+        }
+
+        .metrics-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .metric-card {
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--copper);
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 14px;
+            color: var(--gray-dark);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Case Studies Section */
+        .case-studies {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
+
+        .case-study {
+            margin-bottom: 80px;
+            padding: 40px;
+            background: white;
+            border: 1px solid var(--gray-light);
+        }
+
+        .case-study-header {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 30px;
+            align-items: start;
+        }
+
+        .case-study h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--charcoal);
+        }
+
+        .case-study-meta {
+            font-size: 13px;
+            color: var(--copper);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .case-study p {
+            font-size: 15px;
+            color: var(--gray-dark);
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+
+        .case-study-results {
+            background: var(--ivory);
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .result-item {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .result-item strong {
+            color: var(--copper);
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 80px 20px;
+            margin: 80px 0;
+        }
+
+        .testimonials-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials h2 {
+            font-size: 40px;
+            margin-bottom: 60px;
+            text-align: center;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .testimonial {
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--copper);
+        }
+
+        .testimonial-text {
+            font-size: 15px;
+            line-height: 1.7;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .testimonial-role {
+            font-size: 12px;
+            color: var(--copper);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px;
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            margin-bottom: 30px;
+            color: var(--charcoal);
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: var(--gray-dark);
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--charcoal);
+            color: var(--ivory);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--gray-light);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: left;
+            margin-bottom: 40px;
+        }
+
+        .footer-content h4 {
+            font-size: 14px;
+            margin-bottom: 15px;
+            color: var(--copper);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-content a {
+            color: var(--ivory);
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s;
+        }
+
+        .footer-content a:hover {
+            color: var(--copper);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 13px;
+            color: var(--copper);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 20px;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-tagline {
+                font-size: 16px;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .case-study-header {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .service-card h3 {
+                font-size: 16px;
+            }
+
+            .case-study {
+                padding: 25px;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                display: block;
+                margin-bottom: 15px;
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <a href="#home" class="logo">USMAN <span>ALI</span></a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#results">Results</a></li>
+                <li><a href="#case-studies">Case Studies</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <span class="hero-tag">Meta Ads Specialist | Performance Marketing</span>
+        <h1>Turning Ad Spend Into Measurable Growth</h1>
+        <p class="hero-tagline">Strategic digital marketing and social media management for Pakistani and regional businesses. Data-driven campaigns that deliver results.</p>
+        <a href="#contact" class="cta-primary">Start Your Campaign</a>
+        <a href="#case-studies" class="cta-secondary">See Case Studies</a>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div>
+                <h2>About Me</h2>
+                <p>I'm Usman Ali, a Digital Marketing Specialist with 2+ years of hands-on experience helping Pakistani and regional businesses grow through performance-focused digital marketing. I specialize in Meta Ads, Google Ads, TikTok Ads, SEO, lead generation, social media marketing, and conversion-focused campaign optimization.</p>
+                <p>As founder of Rankza Digital Solutions, I've managed campaigns for 100+ clients across e-commerce, travel, services, and local businesses. My approach is simple: build practical marketing systems that help you reach the right audience and achieve measurable growth. Every campaign is data-driven, optimized, and accountable to real results.</p>
+            </div>
+            <div>
+                <h3 style="margin-bottom: 20px;">Core Expertise</h3>
+                <ul class="expertise-list">
+                    <li>Meta Ads (Facebook & Instagram) — setup, scaling, optimization</li>
+                    <li>Google Ads & TikTok Ads — platform expertise</li>
+                    <li>Lead Generation & E-commerce Sales Funnels</li>
+                    <li>SEO & Organic Social Media Strategy</li>
+                    <li>Campaign Analytics, A/B Testing & Conversion Optimization</li>
+                    <li>Pakistani market expertise — local audience targeting, cultural insights</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2 class="section-title">Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3>Meta Ads Management</h3>
+                <p>Full-funnel Meta advertising (Facebook & Instagram). Campaign setup, audience targeting, creative optimization, A/B testing, and scaling for e-commerce, lead gen, and services.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🔍</div>
+                <h3>Google & TikTok Ads</h3>
+                <p>Multi-platform ad strategy across Google Search, Display, and TikTok. Platform expertise and audience-specific optimization for maximum ROI.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎯</div>
+                <h3>Lead Generation & Funnels</h3>
+                <p>High-converting lead funnels for B2B, services, and e-commerce. Lead capture, nurturing sequences, and direct sales alignment.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📊</div>
+                <h3>Analytics & Reporting</h3>
+                <p>Detailed monthly reports, KPI tracking, performance analysis, and actionable recommendations. Full transparency on campaign metrics and ROI.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📈</div>
+                <h3>SEO & Organic Growth</h3>
+                <p>Search engine optimization, content strategy, and organic social media growth tactics tailored to Pakistani and regional markets.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">⚙️</div>
+                <h3>Strategy & Audit</h3>
+                <p>Digital marketing audit, competitor benchmarking, market analysis, and custom growth strategy aligned to your business goals.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results / Metrics -->
+    <section class="metrics" id="results">
+        <div class="metrics-content">
+            <h2 class="section-title">Results & Impact</h2>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-number">100+</div>
+                    <div class="metric-label">Clients Managed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">120%+</div>
+                    <div class="metric-label">Avg. ROI Improvement</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">1M+</div>
+                    <div class="metric-label">Total Ad Spend Managed</div>
+                </div>
+                <div class="metric-card">
+                    <div class="metric-number">85%+</div>
+                    <div class="metric-label">Client Retention Rate</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="case-studies" id="case-studies">
+        <h2 class="section-title">Case Studies</h2>
+
+        <!-- Case Study 1 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <div>
+                    <span class="case-study-meta">E-commerce | Food & Spices</span>
+                    <h3>Pak Spices (Peshawar)</h3>
+                    <p><strong>Challenge:</strong> Business had zero incoming orders and minimal digital presence. Despite quality products, they lacked a customer acquisition strategy and couldn't compete in the online marketplace.</p>
+                    <p><strong>Solution:</strong> Built end-to-end Meta Ads campaign from scratch with precision audience targeting, multiple creative variations, and optimized checkout experience. Daily monitoring and bid adjustments ensured maximum efficiency.</p>
+                </div>
+                <div class="case-study-results">
+                    <strong style="color: var(--copper); display: block; margin-bottom: 15px;">Results (Week 1)</strong>
+                    <div class="result-item"><strong>Orders acquired:</strong> 135 orders</div>
+                    <div class="result-item"><strong>Cost per order:</strong> 20.42 PKR (highly efficient)</div>
+                    <div class="result-item"><strong>ROI:</strong> Improved to 3:1 (from 1.2:1)</div>
+                    <div class="result-item"><strong>Conversion rate:</strong> Scaled 2.5% → 5%</div>
+                    <div class="result-item"><strong>Total ad spend:</strong> 2,760 PKR</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 2 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <div>
+                    <span class="case-study-meta">Travel & Tourism | Activity Booking</span>
+                    <h3>Desert Safari Dubai</h3>
+                    <p><strong>Challenge:</strong> Booking inquiries were minimal despite premium service offering. High-intent customers existed but weren't reaching them through paid advertising. Needed to increase visibility in competitive UAE market.</p>
+                    <p><strong>Solution:</strong> Restructured Meta Ads strategy with refined audience targeting (UAE travelers, adventure seekers), compelling video creatives showcasing experience, retargeting campaigns, and optimized landing pages for instant booking/inquiry conversion.</p>
+                </div>
+                <div class="case-study-results">
+                    <strong style="color: var(--copper); display: block; margin-bottom: 15px;">Results (Week 1)</strong>
+                    <div class="result-item"><strong>Inquiries/messages:</strong> 130 qualified leads</div>
+                    <div class="result-item"><strong>CPM (Cost per 1000 impressions):</strong> 0.83 AED (exceptionally efficient)</div>
+                    <div class="result-item"><strong>Total ad spend:</strong> 107.98 AED</div>
+                    <div class="result-item"><strong>Lead quality:</strong> High-intent, ready to book</div>
+                    <div class="result-item"><strong>Outcome:</strong> Consistent booking pipeline established</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Study 3 -->
+        <div class="case-study">
+            <div class="case-study-header">
+                <div>
+                    <span class="case-study-meta">Local Services | Electronics & Repair</span>
+                    <h3>Muqads Electric Store (Lahore)</h3>
+                    <p><strong>Challenge:</strong> Service repair business had zero online visibility. Despite skilled technicians and competitive pricing, couldn't attract customers through digital channels. Relied solely on word-of-mouth referrals.</p>
+                    <p><strong>Solution:</strong> Created targeted Meta campaign focusing on local Lahore audience with service-focused messaging, before/after device repair showcases, and direct messaging optimization for instant service bookings and inquiries.</p>
+                </div>
+                <div class="case-study-results">
+                    <strong style="color: var(--copper); display: block; margin-bottom: 15px;">Results (Week 1)</strong>
+                    <div class="result-item"><strong>Service inquiries/bookings:</strong> 150 bookings</div>
+                    <div class="result-item"><strong>CPM:</strong> 19.18 PKR (cost-effective for local services)</div>
+                    <div class="result-item"><strong>Total ad spend:</strong> 2,877 PKR</div>
+                    <div class="result-item"><strong>Lead quality:</strong> High-intent, local, ready to book</div>
+                    <div class="result-item"><strong>Outcome:</strong> Consistent service flow established; repeat customer rate improving</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="testimonials">
+        <div class="testimonials-content">
+            <h2>What Clients Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="testimonial-text">"Usman took our e-commerce business from zero orders to 135 sales in just one week. His expertise in audience targeting and creative optimization was game-changing. Cost per order at 20 PKR is exceptional. Highly recommend."</div>
+                    <div class="testimonial-author">Owner, Pak Spices</div>
+                    <div class="testimonial-role">E-commerce | Peshawar</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"Working with Usman transformed our booking process. He generated 130 qualified inquiries in week one with a CPM of just 0.83 AED. His understanding of the UAE market and customer behavior is remarkable. Professional, responsive, and results-driven."</div>
+                    <div class="testimonial-author">Manager, Desert Safari Dubai</div>
+                    <div class="testimonial-role">Travel & Tourism | UAE</div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-text">"We had zero online presence before Usman came on board. In one week, we received 150 service inquiries at just 19 PKR CPM. His local market knowledge and ability to convert digital traffic into actual bookings is impressive. Best investment we made."</div>
+                    <div class="testimonial-author">Owner, Muqads Electric Store</div>
+                    <div class="testimonial-role">Services | Lahore</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <h2>Ready to Scale Your Business?</h2>
+        <p>Let's discuss your growth goals and build a winning strategy together.</p>
+        <a href="mailto:Usmanali27393@gmail.com" class="cta-primary">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <h4>Quick Links</h4>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#case-studies">Case Studies</a>
+                <a href="#testimonials">Testimonials</a>
+            </div>
+            <div>
+                <h4>Connect</h4>
+                <a href="https://www.linkedin.com/in/usmanali701/" target="_blank">LinkedIn</a>
+                <a href="https://www.instagram.com/usman.ali701/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/usmanali701/" target="_blank">Facebook</a>
+                <a href="mailto:Usmanali27393@gmail.com">Email</a>
+            </div>
+            <div>
+                <h4>Services</h4>
+                <a href="#services">Meta Ads Management</a>
+                <a href="#services">SMM Strategy</a>
+                <a href="#services">Lead Generation</a>
+                <a href="#services">Analytics & Consulting</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Usman Ali. All rights reserved. | Digital Marketing Specialist | Rankza Digital Solutions | Pakistan</p>
+        </div>
+    </footer>
+</body>
+</html>
